@@ -125,7 +125,7 @@ class Ui_MainWindow(object):
         self.TabHolder[direction]['chat'].clear()
     def flushAll(self, msg, ID):
         onlines = [self.flushClient(msg, person) for person in self.Client.OnlinePersons.split('-')[0].split(',') if person != self._id]
-        self.TabHolder[direction]['chat'].clear()
+        self.TabHolder[ID]['chat'].clear()
     def setTab(self, ID):
         print('setting tab for', ID)
         #_translate = QtCore.QCoreApplication.translate

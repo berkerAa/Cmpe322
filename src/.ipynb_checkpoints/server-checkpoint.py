@@ -82,6 +82,7 @@ class Server:
         self.databaseHolder[schoolID]['Online'] = False
         self.writeMessage(conn, 'Server,True')
         self.write(self.databaseHolder)
+        self.read()
         self.clients[schoolID] = self.clients.pop(connID)
         self.databaseHolder[schoolID]['Online'] = True
         return True, schoolID
@@ -125,6 +126,7 @@ class Server:
             self.clients[ID][0].close()
             self.databaseHolder[ID]['Online'] = False
         else:
+            self.writeMessage(conn, 'Server,False')
             self.writeMessage(conn, 'Creds are wrong: ')
             self.clientHandler(self.clients[client][0], client)
     def read(self):

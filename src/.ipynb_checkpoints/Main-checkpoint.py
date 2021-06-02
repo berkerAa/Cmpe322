@@ -5,13 +5,13 @@ import socket, ssl, threading, time
 
 class Client():
     def __init__(self):
-        #self.server = 'vivalarevolucion.tplinkdns.com'
-        #self.port = '65320'
+        self.server = 'vivalarevolucion.tplinkdns.com' #uncomment for over internet usage
+        self.port = '65320' #uncomment for over internet usage
         self.logged = False
-        self.server , self.port = '192.168.1.102', 15000
+        #self.server , self.port = '192.168.1.102', 15000 # comment for over internet usage
         self.Cert = 'Cert/domain.crt'
         self.context = ssl.SSLContext(ssl.PROTOCOL_TLSv1_2)
-        self.context.load_verify_locations('Cert/domain.crt')
+        self.context.load_verify_locations('Cert/domain.crt') #\\
         self.msg = {"Server": []}
         self.Online = []
         self.Offline = []
