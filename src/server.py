@@ -72,7 +72,7 @@ class Server:
                 return 1, schoolID
             
         return 0, schoolID
-    def signUp(self, conn):
+    def signUp(self, conn, connID):
         #self.writeMessage(conn, 'Please enter your School ID: ')
         schoolID = self.readMessage(conn)
         self.databaseHolder[schoolID] = {}
@@ -82,6 +82,7 @@ class Server:
         self.databaseHolder[schoolID]['Online'] = False
         self.writeMessage(conn, 'Server,True')
         self.write(self.databaseHolder)
+        self.clients[schoolID] = self.clients.pop(connID)
         self.databaseHolder[schoolID]['Online'] = True
         return True, schoolID
     def direct(self, direction, msg, conn, ID):
@@ -107,7 +108,7 @@ class Server:
         msg = self.readMessage(conn)
         print('Someone Connected')
         if msg.lower() == 'sign up':
-            loginCheck, ID =  self.signUp(conn)
+            loginCheck, ID =  self.signUp(conn, client)
             
            # self.writeMessage(conn, 'forwarding to Login phase')
         else:

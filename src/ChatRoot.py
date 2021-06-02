@@ -110,7 +110,16 @@ class Ui_MainWindow(object):
             self.OnChat(direction)
             
             self.TabHolder[direction]['Ok'] = True
+        self.TabHolder[direction]['commWindow'].addItem('Me' + ': ' + msg)
     def flushClient(self, msg, direction):
+        if direction in list(self.TabHolder.keys()):
+                        #self.TabHolder[direction]['commWindow'].addItem(direction + ': ' + self.Client.msg[direction].pop())
+                        pass
+        else:
+        self.TabHolder[direction] = {}
+        self.NeededSetups.append(direction)
+        self.trick.click()
+        time.sleep(0.7)
         self.Client.flush(self.Client.WrappedSock, direction + ',' + msg)
         self.TabHolder[direction]['commWindow'].addItem('Me: ' + msg)
         self.TabHolder[direction]['chat'].clear()
