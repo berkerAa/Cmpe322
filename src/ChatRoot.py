@@ -116,10 +116,10 @@ class Ui_MainWindow(object):
                         #self.TabHolder[direction]['commWindow'].addItem(direction + ': ' + self.Client.msg[direction].pop())
                         pass
         else:
-        self.TabHolder[direction] = {}
-        self.NeededSetups.append(direction)
-        self.trick.click()
-        time.sleep(0.7)
+            self.TabHolder[direction] = {}
+            self.NeededSetups.append(direction)
+            self.trick.click()
+            time.sleep(0.7)
         self.Client.flush(self.Client.WrappedSock, direction + ',' + msg)
         self.TabHolder[direction]['commWindow'].addItem('Me: ' + msg)
         self.TabHolder[direction]['chat'].clear()
