@@ -1,0 +1,18 @@
+[I 2021-05-29 23:15:32.641 ServerApp] jupyterlab | extension was successfully linked.
+[I 2021-05-29 23:15:32.657 LabApp] JupyterLab extension loaded from /home/berker/.local/lib/python3.8/site-packages/jupyterlab
+[I 2021-05-29 23:15:32.657 LabApp] JupyterLab application directory is /home/berker/.local/share/jupyter/lab
+[I 2021-05-29 23:15:32.659 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2021-05-29 23:15:32.659 ServerApp] Serving notebooks from local directory: /home/berker/github-remote/Cmpe322
+[I 2021-05-29 23:15:32.659 ServerApp] Jupyter Server 1.2.2 is running at:
+[I 2021-05-29 23:15:32.659 ServerApp] https://192.168.1.102:11907/lab?token=ceb8d944b2d3bee36a9482197b47becc2eafcd3f4bdc0766
+[I 2021-05-29 23:15:32.659 ServerApp]  or https://127.0.0.1:11907/lab?token=ceb8d944b2d3bee36a9482197b47becc2eafcd3f4bdc0766
+[I 2021-05-29 23:15:32.659 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 2021-05-29 23:15:32.660 ServerApp] 
+    
+    To access the server, open this file in a browser:
+        file:///home/berker/.local/share/jupyter/runtime/jpserver-202470-open.html
+    Or copy and paste one of these URLs:
+        https://192.168.1.102:11907/lab?token=ceb8d944b2d3bee36a9482197b47becc2eafcd3f4bdc0766
+     or https://127.0.0.1:11907/lab?token=ceb8d944b2d3bee36a9482197b47becc2eafcd3f4bdc0766
+[W 2021-05-31 13:20:44.397 ServerApp] SSL Error on 7 ('192.168.1.102', 57048): [SSL: SSLV3_ALERT_CERTIFICATE_UNKNOWN] sslv3 alert certificate unknown (_ssl.c:1123)
+[W 2021-05-31 13:20:44.397 ServerApp] SSL Error on 8 ('192.168.1.102', 57050): [SSL: SSLV3_ALERT_CERTIFICATE_UNKNOWN] sslv3 alert certificate unknown (_ssl.c:1123)
